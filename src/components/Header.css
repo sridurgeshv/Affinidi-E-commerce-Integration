@@ -1,0 +1,87 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #131921;
+  border-bottom: 1px solid #ddd;
+  width: 98.02vw; /* Set the width to 100vw (viewport width) */
+  margin-left: calc(-50vw + 50%); /* Adjust the left margin */
+  margin-right: calc(-50vw + 50%); /* Adjust the right margin */
+  left: 0; /* Align the header to the left edge of the screen */
+}
+
+  .Header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  .Header a {
+    text-decoration: none;
+  }
+
+  .Header nav {
+    display: flex;
+    align-items: center;
+  }
+  .Header div span {
+    margin-right: 10px;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .Header .CartIcon {
+    margin-left: 20px;
+    padding-right: 20px;
+  }
+
+  .CartIcon img {
+    height: 24px; 
+    width: auto;
+    cursor: pointer;
+  }
+
+  .Header button {
+    padding: 6px 12px; 
+    font-size: 15px;
+    line-height: 1;
+    border-radius: 4px; 
+    font-family: "Georgia", Times, serif;
+    font-weight: bold;
+  }
+  
+  .UserName {
+    color: white; /* Set text color to white */
+  }
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .Header {
+    flex-direction: column; 
+    align-items: flex-start;
+    }
+
+  .Header h1,
+  .Header div,
+  .Header .CartIcon {
+    width: 100%; 
+    justify-content: space-between; 
+    padding: 10px 0; 
+  }
+
+  .Header div {
+    order: 2; 
+  }
+  
+  .Header .CartIcon {
+    order: 3;
+  }
+  
+    .Header div span {
+      font-size: 16px;
+    }
+  }
+  
+ 
