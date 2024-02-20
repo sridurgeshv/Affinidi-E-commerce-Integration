@@ -1,8 +1,9 @@
-# Integrating Affinidi Login into a React Application
-### Overview
+# Integrating Affinidi Authentication into an E-commerce React Application
+
 This document provides instructions for integrating the Affinidi passwordless login solution into a React application.
 
 Affinidi offers secure, privacy-preserving credential sharing powered by blockchain technology. By integrating their login component, you can enable passwordless authentication for users.
+
 
 ## Benefits:
 
