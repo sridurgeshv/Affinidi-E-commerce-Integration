@@ -4,6 +4,13 @@ This document provides instructions for integrating the Affinidi passwordless lo
 
 Affinidi offers secure, privacy-preserving credential sharing powered by blockchain technology. By integrating their login component, you can enable passwordless authentication for users.
 
+## API Reference
+
+#### The authentication completion route handles the response after a successful login with Affinidi. It accepts a POST request at /api/affinidi-auth/complete with the authorization code and state.
+
+```http
+  POST /api/affinidi-auth/complete
+```
 
 ## Benefits:
 
