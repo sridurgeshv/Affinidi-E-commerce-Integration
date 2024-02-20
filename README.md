@@ -27,9 +27,11 @@ Once we confirm that the generated application is working, we will enable the Af
 ```
 npm install @affinidi/affinidi-react-auth
 ```
-2. To proxy unknown requests to your API server during development, add a proxy field to your package.json like this:
 
+2. To proxy unknown requests to your API server during development, add a proxy field to your package.json like this:
+```
  "proxy": "http://localhost:3001"
+```
 
 After installing the library and configuring the package.json, we modify the src/App.js file and paste the following codes to enable Affinidi Login component.
 
