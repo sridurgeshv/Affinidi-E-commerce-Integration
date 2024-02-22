@@ -25,9 +25,39 @@ Before integrating Affinidi Login, you will need:
 - Affinidi CLI tools installed
 - A React application generated with Create React App
 
-## Implementation Guide
+## Introduction
 
-### Enable Affinidi Login
+### How Affinidi Vault Works
+Use Affinidi Vault to discover, collect, store, share, and monetise your data across different applications while controlling your data. Applications that wish to request data from you must get the user’s consent before being able to extract the data from the Vault through Verifiable Presentation (VP).
+![Alt Text](https://github.com/sridurgeshv/Affinidi-Capstone-Project/blob/main/images/arch.png)
+
+## Presentation Exchange (PEX) Query
+The Presentation Exchange protocol implemented by Affinidi Vault enables data interoperability and uses PEX query to request user data. Applications can assess the trustworthiness of the data by describing the required data that the user must satisfy using the presentation definition.
+
+See the sample PEX query that requests the email address of the user from the Vault:
+```
+{
+  "id": "email_vc_data",
+  "name": "Email VC data",
+  "purpose": "Check if data contains necessary fields",
+  "constraints": {
+    "fields": [
+      {
+        "path": [
+          "$.credentialSubject.email"
+        ],
+        "purpose": "Email address",
+        "filter": {
+          "type": "string"
+        }
+      }
+    ]
+  }
+} 
+```
+The above definition is part of the default presentation definition of Affinidi Login to authenticate users using their verified email address as their identity.
+
+## Enable Affinidi Login
 
 Once we confirm that the generated application is working, we will enable the Affinidi Login through the affinidi-react-auth  library.
 
@@ -90,3 +120,16 @@ After implementing the required codes, restart the application. The Affinidi Log
 
 In cases where proxy settings is not working on the app with your hosting provider, define the REACT_APP_SERVER_URI in the .env with the base url of your Express server.
 
+- List the available data points your application can request from the Affinidi Vault.[Affinidi Vault User Data](https://docs.affinidi.com/docs/affinidi-vault/affinidi-vault-data/)
+- Learn how to use PEX queries to request data from Affinidi Vault.[Requesting User Data](https://docs.affinidi.com/docs/affinidi-vault/requesting-user-data/)
+
+
+
+
+
+
+
+
+
+
+ 
